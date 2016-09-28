@@ -1,6 +1,6 @@
 package tests;
 
-import main.Main;
+import handler.HandlerClass;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -10,20 +10,20 @@ import org.junit.Test;
 public class TestClass {
 
     @Test
-    public void findMinCountElem_RandomArr_4Returned(){
+    public void findMinCountElem_RandomArr_6Returned(){
         int[] actualArrayOfNumbers = {111,5,7,43,3,0,123,2,11,8};
-        Assert.assertEquals(6,Main.findMinCountElemToAbort(actualArrayOfNumbers));
+        Assert.assertEquals(6, HandlerClass.findMinCountElemToAbort(actualArrayOfNumbers));
     }
 
     @Test
     public void findMinCountElem_EmptyArr_0Returned(){
         int[] actualArrayOfNumbers = {};
-        Assert.assertEquals(0,Main.findMinCountElemToAbort(actualArrayOfNumbers));
+        Assert.assertEquals(0,HandlerClass.findMinCountElemToAbort(actualArrayOfNumbers));
     }
 
     @Test
     public void findMinCountElem_OneElemInArr_0Returned(){
         int[] actualArrayOfNumbers = {5};
-        Assert.assertEquals(0,Main.findMinCountElemToAbort(actualArrayOfNumbers));
+        Assert.assertEquals(0,HandlerClass.findMinCountElemToAbort(actualArrayOfNumbers));
     }
 }

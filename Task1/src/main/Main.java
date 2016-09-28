@@ -1,5 +1,7 @@
 package main;
 
+import calculateByFormul.CalculateClass;
+
 import java.util.Scanner;
 
 /**
@@ -12,21 +14,10 @@ public class Main {
         try{
             double x = scanner.nextDouble();
             double y = scanner.nextDouble();
-            System.out.printf("Result: %f", calculateValue(x,y));
+            System.out.printf("Result: %f", CalculateClass.calculateValue(x,y));
         }
         catch (Exception exc){
             System.out.printf("Incorrect input data");
         }
-    }
-
-
-    public static double calculateValue(double x, double y) {
-        double tempValue1=raiseToSecondPower(Math.sin(x+y))+1;
-        double tempValue2=2+Math.abs(x-2*x/(1+raiseToSecondPower(x*y)));
-        return tempValue1/tempValue2+x;
-    }
-
-    public static double raiseToSecondPower(double value) {
-        return value*value;
     }
 }

@@ -1,8 +1,6 @@
 package main;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import primeNumbers.PrimeNumbersClass;
 import java.util.Scanner;
 
 /**
@@ -13,7 +11,7 @@ public class Main {
         try {
             int[] array=getInputArray();
             if(array!=null) {
-                int[] primeNumberIndicesArray = searchPrimeNumberIndices(array);
+                int[] primeNumberIndicesArray = PrimeNumbersClass.searchPrimeNumberIndices(array);
                 System.out.printf("Indices of prime numbers: ");
                 for (int i = 0; i < primeNumberIndicesArray.length; i++)
                     System.out.printf("%d ", primeNumberIndicesArray[i] + 1);
@@ -37,32 +35,6 @@ public class Main {
                 array[i] = scanner.nextInt();
             }
          }
-        return array;
-    }
-
-    public static boolean checkPrime(int number) {
-        if(number<=1)
-            return false;
-        double numberSqrt = Math.sqrt(number);
-        for (int i = 2; i <= numberSqrt; i++)
-            if (number % i == 0)
-                return false;
-        return true;
-    }
-
-    public static int[] searchPrimeNumberIndices(int[] array) {
-        int arrayLength = array.length;
-        List<Integer> primeNumberIndices = new ArrayList();
-        for (int i = 0; i < arrayLength; i++)
-            if (checkPrime(array[i]))
-                primeNumberIndices.add(i);
-        return convertListToArray(primeNumberIndices);
-    }
-
-    public static int[] convertListToArray(List<Integer> list) {
-        int[] array=new int[list.size()];
-        for(int i=0;i<list.size();i++)
-            array[i]=list.get(i);
         return array;
     }
 }
