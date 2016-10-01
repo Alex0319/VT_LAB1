@@ -121,9 +121,9 @@ public class Book implements Comparable,Cloneable{
         @Override
         public int compare(Book object1, Book object2) {
             if(object1==null && object2!=null)
-                return -1;
-            if(object1!=null && object2==null)
                 return 1;
+            if(object1!=null && object2==null)
+                return -1;
             return object1.getBookTitle().compareTo(object2.getBookTitle());
         }
     }
@@ -133,9 +133,9 @@ public class Book implements Comparable,Cloneable{
         @Override
         public int compare(Book object1, Book object2) {
             if(object1==null && object2!=null)
-                return -1;
-            if(object1!=null && object2==null)
                 return 1;
+            if(object1!=null && object2==null)
+                return -1;
             int compareResult=object1.getBookTitle().compareTo(object2.getBookTitle());
             if(compareResult==0)
                 compareResult=object1.getBookAuthor().compareTo(object2.getBookAuthor());
@@ -148,9 +148,9 @@ public class Book implements Comparable,Cloneable{
         @Override
         public int compare(Book object1, Book object2) {
             if(object1==null && object2!=null)
-                return -1;
-            if(object1!=null && object2==null)
                 return 1;
+            if(object1!=null && object2==null)
+                return -1;
             int compareResult=object1.getBookAuthor().compareTo(object2.getBookAuthor());
             if(compareResult==0)
                 compareResult=object1.getBookTitle().compareTo(object2.getBookTitle());
@@ -163,9 +163,9 @@ public class Book implements Comparable,Cloneable{
         @Override
         public int compare(Book object1, Book object2) {
             if(object1==null && object2!=null)
-                return -1;
-            if(object1!=null && object2==null)
                 return 1;
+            if(object1!=null && object2==null)
+                return -1;
             int compareResult=object1.getBookAuthor().compareTo(object2.getBookAuthor());
             if(compareResult==0)
                 compareResult=object1.getBookTitle().compareTo(object2.getBookTitle());
